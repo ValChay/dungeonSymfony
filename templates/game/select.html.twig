@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello   !{% endblock %}
+
+{% block body %}
+
+ {{ character.name }}
+    <table>
+        <tr>
+            <th>Nom Personnage</th>
+            <th>Max life  </th>
+            <th>Max current  </th>
+            <th>Max energy  </th>
+            <th>Current energy </th>
+            <th>Attack </th>
+            <th>Defense </th>
+            <th>Action </th>
+        </tr>
+        <tr>
+            <td> {{ character.name }}</td>
+            <td> {{ character.maxLife }}</td>
+            <td> {{ character.currentLife }}</td>
+            <td> {{ character.maxEnergy }}</td>
+            <td> {{ character.currentEnergy }}</td>
+            <td>{{character.attack}}</td>
+            <td>{{character.defense}}</td>
+            <td>
+                <button><a href="{{ path ('poe_game_show',{id: character.id}) }}">Modifier</a></button>
+                <button><a href="{{ path ('poe_game_show',{id: character.id}) }}">Supprimer</a></button>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

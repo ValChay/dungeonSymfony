@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ defender.wound(20)}};
+    $tab []= $attacker->getName().'frappe'.$defender->getName();
+    $attacker->wound(20);
+    $tab []= $defender->getName().'frappe'.$attacker->getName(); }}
+
+{% endblock %}
